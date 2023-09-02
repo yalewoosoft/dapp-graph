@@ -21,11 +21,11 @@ if __name__ == '__main__':
         'Authorization': 'Bearer {}'.format(token)
     }
     # api access
-    with open("dataset.csv", "w+") as f:
+    with open("dataset.csv", "a+") as f:
+        counter = 0
         f.write("date,count\n")
-        for i in daterange(date(2020, 1, 1), date(2022, 12, 31)):
+        for i in daterange(date(2020, 1, 31), date(2022, 12, 31)):
             r: requests.Response = None
-            counter = 0
             try:
                 r = requests.get(query_url.format(i), headers=headers).json()
                 count = r['total_count']
