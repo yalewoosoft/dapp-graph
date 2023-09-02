@@ -29,7 +29,7 @@ if __name__ == '__main__':
         first_line = f.readline()
         if write_header:
             f.write("date,count\n")
-        for i in daterange(date(2023, 1, 1), date(2023, 9, 1)):
+        for i in daterange(date(2020, 1, 1), date(2023, 9, 1)):
             r: requests.Response = None
             try:
                 r = requests.get(query_url.format(i), headers=headers).json()
