@@ -1,3 +1,7 @@
 /token.txt
 venv/
 
+.Rproj.user
+/.RData
+/.Rhistory
+/dapp-graph.Rproj
